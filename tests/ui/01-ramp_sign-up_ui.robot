@@ -236,6 +236,14 @@ Ramp Sign-Up page Work email address field should be deemed invalid when value c
     THEN field work email address should be deemed invalid
     [Teardown]    end browser instance
 
+Ramp Sign-Up page Work email address field should be deemed invalid when value exceeds character limit - 65 local 256 domain 322 total
+    GIVEN ramp sign-up url
+    WHEN ramp sign-up page is opened
+    AND email field is populated    value=emaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiil@teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest.net
+    AND start application button is pressed
+    THEN field work email address should be deemed invalid
+    [Teardown]    end browser instance
+
 Ramp Sign-Up page Work email address field should be deemed invalid when value exceeds character limit - 65 local
     GIVEN ramp sign-up url
     WHEN ramp sign-up page is opened
@@ -244,18 +252,18 @@ Ramp Sign-Up page Work email address field should be deemed invalid when value e
     THEN field work email address should be deemed invalid
     [Teardown]    end browser instance
 
-Ramp Sign-Up page Work email address field should be deemed invalid when value exceeds character limit - 191 domain
+Ramp Sign-Up page Work email address field should be deemed invalid when value exceeds character limit - 256 domain
     GIVEN ramp sign-up url
     WHEN ramp sign-up page is opened
-    AND email field is populated    value=email@teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest.net
+    AND email field is populated    value=email@teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest.net
     AND start application button is pressed
     THEN field work email address should be deemed invalid
     [Teardown]    end browser instance
 
-Ramp Sign-Up page Work email address field should be deemed valid when value is within character limit - 64 local 190 domain 254 total
+Ramp Sign-Up page Work email address field should be deemed valid when value is within character limit - 64 local 255 domain 320 total
     GIVEN ramp sign-up url
     WHEN ramp sign-up page is opened
-    AND email field is populated    value=emaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiil@teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest.net
+    AND email field is populated    value=emaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiil@teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest.net
     AND start application button is pressed
     THEN field work email address should be deemed valid
     [Teardown]    end browser instance
